@@ -1,11 +1,11 @@
-db.produtos.find({ 
-  valoresNutricionais: { 
+db.produtos.find({
+  valoresNutricionais: {
     $elemMatch: {
       percentual: { $gte: 30, $lte: 40 },
       tipo: { $eq: "proteínas" },
     },
   },
-}, { 
-  nome:1, 
-  _id:0,
+}, {
+  nome: 1,
+  _id: 0,
 });
